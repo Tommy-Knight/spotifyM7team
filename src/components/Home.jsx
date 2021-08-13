@@ -1,7 +1,7 @@
-import React, { Component } from "react"
+import React from "react"
 
-export default class Home extends Component {
-	render() {
+export default function Home() {
+	
 		return (
 			<div style={{marginBottom:"500px"}}>
 				<div className="jumbotron jumbotron-fluid">
@@ -219,4 +219,5 @@ export default class Home extends Component {
 			</div>
 		)
 	}
-}
+
+	
