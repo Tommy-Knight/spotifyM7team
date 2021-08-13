@@ -80,7 +80,7 @@ export default function Search(props) {
 					{songs.map(song => (
 							 <Card className='col-md-3 text-white my-2 bg-dark' key={song.id}>
 						<Card.Img variant="top"  src={song.album.cover_medium} alt={song.album.id}
-						 onClick={()=> props.history.push('/artist/' + song.artist.id)}  />
+						 onClick={()=> props.history.push('/album/' + song.album.id)}  />
 						<Card.Body>
 						  <Card.Title>{song.album.title}</Card.Title>
 						  <Card.Text>  - {song.artist.name}  </Card.Text>						  

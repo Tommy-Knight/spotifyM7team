@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import Search from "./components/Search"
-import Albumpage from "./components/Albumpage"
+import Albumpage from "./components/Albums"
 import Library from "./components/Library"
 import AlbumDetails from "./components/AlbumDetails"
 
@@ -26,10 +26,10 @@ function App() {
 							exact
 						/>
 						<Route
-							render={(routerProps) => <Albumpage {...routerProps} title='' />}
+							render={(routerProps) => <AlbumDetails {...routerProps} title='' />}
 							path='/album'
 						/>
-						<Route exact path="/album/:albumId/" component={AlbumDetails} />
+						{/* <Route exact path="/album/:albumId/" component={AlbumDetails} /> */}
 						<Route
 							render={(routerProps) => <Library {...routerProps} title='' />}
 							path='/Library'

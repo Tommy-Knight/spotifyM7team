@@ -1,6 +1,6 @@
 // https://striveschool-api.herokuapp.com/api/deezer/Album/{id}
 import { useState, useEffect } from "react"
-import AlbumPage from './AlbumPage'
+import Albums from './Albums'
 
 const AlbumDetails = ({match}) => {
 
@@ -10,25 +10,25 @@ const AlbumDetails = ({match}) => {
 
         const getAlbumId = async () =>{
 
-            let id = match.params.AlbumId
+            let id = match.params.albumId
             if(id){
             let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/album/' + id)
             let AlbumId = await response.json()
-            console.log(AlbumId);
+            console.log('what is this', AlbumId);
             setInfo(AlbumId)    
             }    
         }
         getAlbumId()
         
 
-    },[match.params.AlbumId])
+    },[match.params.albumId])
 
     
 
     return (  
         <div>
             {
-                <AlbumPage obj={info} />
+                <Albums obj={info} />
                 
             }
         </div>

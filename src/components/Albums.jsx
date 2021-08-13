@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Library(props) {
+export default function Albums(obj) {
 
-
+console.log('object', obj )
 	
 	return (
 		<div>
@@ -12,7 +12,7 @@ export default function Library(props) {
 						<div className='container m-0 p-1'>
 							<img src='./assets/images/album-images/hey-jude.jpg' id='img-album-n' alt='' />
 							<h4>Greatest Hits Collection (First Edition)</h4>
-							<p>Beatles</p>
+							<p>{obj.name}</p>
 							<button className='btn btn-success btn-n'>PLAY</button>
 							<p>1970 • 16 SONGS</p>
 							<div>
