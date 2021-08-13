@@ -28,10 +28,11 @@ console.log('object', obj )
 					</div>
 					<div className='col-lg-5 col-md-5 tracklist-n'>
 						<div className='track-container'>
+	
 
-						{ obj.obj.tracks.data?.map( track => 
+							{ obj.obj.tracks?.data.map( track => 
 
-							<ul className='fa-ul'>
+							<ul key={track.id} className='fa-ul'>
 								<li>
 									<span className='fa-li'>
 										<i className='fas fa-music' />

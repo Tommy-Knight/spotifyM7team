@@ -7,7 +7,7 @@ const AlbumDetails = ({match}) => {
     const [info, setInfo] = useState('')
 
     useEffect(()=>{
-
+console.log("here")
         const getAlbumId = async () =>{
 
             let id = match.params.albumId
@@ -21,7 +21,7 @@ const AlbumDetails = ({match}) => {
         getAlbumId()
         
 
-    },[match.params.albumId])
+    },[])
 
     
 

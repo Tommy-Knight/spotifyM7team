@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import Search from "./components/Search"
-import Albumpage from "./components/Albums"
 import Library from "./components/Library"
 import AlbumDetails from "./components/AlbumDetails"
 
