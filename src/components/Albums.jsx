@@ -12,7 +12,7 @@ console.log('object', obj )
 						<div className='container m-0 p-1'>
 							<img src='./assets/images/album-images/hey-jude.jpg' id='img-album-n' alt='' />
 							<h4>{obj.obj.title}</h4>
-							<p>{obj.obj.artist.name}</p>
+							<p>{obj.obj.artist?.name}</p>
 							<button className='btn btn-success btn-n'>PLAY</button>
 							<p>{obj.obj.nb_tracks} tracks</p>
 							<div>
@@ -28,155 +28,23 @@ console.log('object', obj )
 					</div>
 					<div className='col-lg-5 col-md-5 tracklist-n'>
 						<div className='track-container'>
+
+						{ obj.obj.tracks.data?.map( track => 
+
 							<ul className='fa-ul'>
 								<li>
 									<span className='fa-li'>
 										<i className='fas fa-music' />
 									</span>
-									She Loves You
+									{track.title}
+								<span style={{color:"grey", fontSize:"10px"}}>{track.artist.name}</span>								
 								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									From Me to You{" "}
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									We Can Work It Out{" "}
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Help!
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Michelle
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Yesterday
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									I Feel Fine - Example of Long Text With No Meaning Extra Extra
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Yellow Submarine - Example of Long Text With No Meaning Extra Extra
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Can't Buy Me Love
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Bad Boy
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Day Tripper
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									A Hard Day's Night - Example of Long Text With No Meaning Extra Extra
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Ticket To Ride - Example of Long Text With No Meaning
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Paperback Writer - Example of Long Text With No Meaning
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Eleanor Rigby
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									I Want to Hold Your Hand - Example of Long Text With No Meaning
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Ticket To Ride
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Paperback Writer - Example of Long Text With No Meaning
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Eleanor Rigby
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									I Want to Hold Your Hand - Example of Long Text With No Meaning
-								</li>
-								<li>Beatles</li>
-								<li>
-									<span className='fa-li'>
-										<i className='fas fa-music' />
-									</span>
-									Ticket To Ride
-								</li>
-								<li>Beatles</li>
 							</ul>
+
+						)
+
+						}
+
 						</div>
 					</div>
 				</div>
