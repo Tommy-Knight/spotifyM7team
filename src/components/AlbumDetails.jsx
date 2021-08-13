@@ -4,7 +4,7 @@ import Albums from './Albums'
 
 const AlbumDetails = ({match}) => {
 
-    const [info, setInfo] = useState(null)
+    const [info, setInfo] = useState('')
 
     useEffect(()=>{
 
@@ -14,8 +14,8 @@ const AlbumDetails = ({match}) => {
             if(id){
             let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/album/' + id)
             let AlbumId = await response.json()
-            console.log('what is this', AlbumId);
             setInfo(AlbumId)    
+            console.log('what is this', AlbumId);
             }    
         }
         getAlbumId()

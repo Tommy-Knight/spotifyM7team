@@ -11,10 +11,10 @@ console.log('object', obj )
 					<div className='col-lg-6 col-md-6 album-n'>
 						<div className='container m-0 p-1'>
 							<img src='./assets/images/album-images/hey-jude.jpg' id='img-album-n' alt='' />
-							<h4>Greatest Hits Collection (First Edition)</h4>
-							<p>{obj.name}</p>
+							<h4>{obj.obj.title}</h4>
+							<p>{obj.obj.artist.name}</p>
 							<button className='btn btn-success btn-n'>PLAY</button>
-							<p>1970 • 16 SONGS</p>
+							<p>{obj.obj.nb_tracks} tracks</p>
 							<div>
 								<span className='fa-stack mb-2' id='toggle'>
 									<i className='far fa-heart fa-stack-1x' />

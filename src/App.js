@@ -27,7 +27,7 @@ function App() {
 						/>
 						<Route
 							render={(routerProps) => <AlbumDetails {...routerProps} title='' />}
-							path='/album'
+							path='/album/:albumId'
 						/>
 						{/* <Route exact path="/album/:albumId/" component={AlbumDetails} /> */}
 						<Route
