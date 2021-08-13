@@ -4,45 +4,43 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import Search from "./components/Search"
+import Albumpage from "./components/Albumpage"
 import Library from "./components/Library"
 
 function App() {
 	return (
-		<div className="App">
+		<div className='App'>
 			<Router>
 				<>
 					<Navbar />
 					<Switch>
 						<Route
-							render={(routerProps) => (
-								<Home {...routerProps} title="home" />
-							)}
-							path="/home"
+							render={(routerProps) => <Home {...routerProps} title='home' />}
+							path='/home'
 							exact
 						/>
 						<Route
-							render={(routerProps) => (
-								<Search {...routerProps} title="Show Details" />
-							)}
-							path="/search"
+							render={(routerProps) => <Search {...routerProps} title='Show Details' />}
+							path='/search'
 							exact
 						/>
 						<Route
-							render={(routerProps) => (
-								<Library {...routerProps} title="" />
-							)}
-							path="/library"
-							
+							render={(routerProps) => <Albumpage {...routerProps} title='' />}
+							path='/album'
+						/>
+						<Route
+							render={(routerProps) => <Library {...routerProps} title='' />}
+							path='/Library'
 						/>
 
-						<Route path="/">
+						<Route path='/'>
 							<h1>Welcome to Tommyify</h1>
 						</Route>
 					</Switch>
 				</>
 			</Router>
 		</div>
-	)
+	);
 }
 
 export default App

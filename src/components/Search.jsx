@@ -81,7 +81,7 @@ export default function Search() {
 						songs.map((song) => (
 							<div>
 								<Col key={song.id} className='my-2'>
-									<Link to={`/library/${song.id}`}>
+									<Link to={`/album/${song.id}`}>
 										<img
 											style={{ marginTop: "20px" }}
 											className='iconHover'
@@ -96,7 +96,7 @@ export default function Search() {
 									</Link>
 								</Col>
 								<Col className='my-2'>
-									<Link to={`/library/${song.id}`}>
+									<Link to={`/album/${song.id}`}>
 										<img className='iconHover' src={song.artist.picture} alt={song.artist.name} />
 										<div
 											style={{ width: "145px", marginBottom: "142px" }}
