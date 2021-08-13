@@ -1,9 +1,9 @@
-import { Container, Col, Row, Spinner, Alert, Form } from "react-bootstrap";
+import { Container, Card, Row, Spinner, Alert, Form } from "react-bootstrap";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-export default function Search() {
-	const [songs, setSongs] = useState({});
+export default function Search(props) {
+	const [songs, setSongs] = useState([]);
 	const [showSpinner, setShowSpinner] = useState(false);
 	const [findError, setFindError] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
@@ -77,39 +77,17 @@ export default function Search() {
 			<Container className='m-15 p-5' fluid>
 				<h3 className='mt-4 text-white'>Searching for "{searchQuery}"</h3>
 				<Row>
-					{songs.length > 0 ? (
-						songs.map((song) => (
-							<div>
-								<Col key={song.id} className='my-2'>
-									<Link to={`/album/${song.id}`}>
-										<img
-											style={{ marginTop: "20px" }}
-											className='iconHover'
-											src={song.album.cover}
-											alt={song.album.title}
-										/>
-										<div
-											style={{ width: "145px", marginBottom: "50px" }}
-											className='text-white albumSearch'>
-											{song.album.title}
-										</div>
-									</Link>
-								</Col>
-								<Col className='my-2'>
-									<Link to={`/album/${song.id}`}>
-										<img className='iconHover' src={song.artist.picture} alt={song.artist.name} />
-										<div
-											style={{ width: "145px", marginBottom: "142px" }}
-											className='text-white albumSearch'>
-											{song.artist.name}
-										</div>
-									</Link>
-								</Col>
-							</div>
-						))
-					) : (
-						<p>Nothing Here!</p>
-					)}
+					{songs.map(song => (
+							 <Card className='col-md-3 text-white my-2 bg-dark' key={song.id}>
+						<Card.Img variant="top"  src={song.album.cover_medium} alt={song.album.id}
+						 onClick={()=> props.history.push('/artist/' + song.artist.id)}  />
+						<Card.Body>
+						  <Card.Title>{song.album.title}</Card.Title>
+						  <Card.Text>  - {song.artist.name}  </Card.Text>						  
+						</Card.Body>
+					  </Card> ))
+}		
+						
 				</Row>
 			</Container>
 		</>

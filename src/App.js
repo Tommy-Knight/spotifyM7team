@@ -6,6 +6,7 @@ import Home from "./components/Home"
 import Search from "./components/Search"
 import Albumpage from "./components/Albumpage"
 import Library from "./components/Library"
+import AlbumDetails from "./components/AlbumDetails"
 
 function App() {
 	return (
@@ -28,6 +29,7 @@ function App() {
 							render={(routerProps) => <Albumpage {...routerProps} title='' />}
 							path='/album'
 						/>
+						<Route exact path="/album/:albumId/" component={AlbumDetails} />
 						<Route
 							render={(routerProps) => <Library {...routerProps} title='' />}
 							path='/Library'
